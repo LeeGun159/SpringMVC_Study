@@ -57,7 +57,7 @@ public class RequestParamController {
     @RequestMapping("/request-param-required")
     public String requestParamRequired(
             @RequestParam(required = true) String username,
-            @RequestParam(required = false) Integer age) {
+            @RequestParam(required = false) Integer age) { //age->int는 null값을 허용 안해서 Integer로 타입설정
 
         log.info("username={}, age={}", username, age);
         return "ok";
